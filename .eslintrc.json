@@ -1,0 +1,73 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "plugin:prettier/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "prettier/@typescript-eslint",
+        "airbnb"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2020,
+        "sourceType": "module"
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        },
+        "import/extensions": [
+           ".js",
+           ".jsx",
+           ".ts",
+           ".tsx"
+          ]
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint",
+        "prettier"
+    ],
+    "rules": {
+        "semi": ["error", "always"],
+        "quotes": ["error", "single"],
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+        "prettier/prettier": ["error",{
+            "endOfLine": "auto"
+            }
+          ],
+        "no-use-before-define": "off",
+        "@typescript-eslint/no-use-before-define": ["error"],
+        "import/prefer-default-export": "off",
+        "import/namespace": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "eslint-disable-next-line" : "off",
+        "comma-dangle": ["error", "never"],
+       // "import/no-unresolved": "["error", { "commonjs": true, "caseSensitive": true }]",
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+              "js": "always",
+              "jsx": "always",
+              "ts": "always",
+              "tsx": "always"
+            }
+         ],
+         "object-curly-newline": ["error", {
+            "ObjectExpression": "always",
+            "ObjectPattern": { "multiline": true },
+            "ImportDeclaration": "never",
+            "ExportDeclaration": { "multiline": true, "minProperties": 3 }
+        }],
+        "react/forbid-component-props" : "off",
+        "function-paren-newline": ["error", "never"],
+        "linebreak-style": 0
+    }
+}
